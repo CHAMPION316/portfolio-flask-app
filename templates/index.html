@@ -1,4 +1,14 @@
 {% extends 'base.html' %}
 
 {% block content %}
+    <div class="container-fluid pt-4">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 text-center">
+                <img src="{{ url_for('static', filename='img/Roger.jpg') }}" id="roger-img" class="img-fluid circle-img" alt="Roger">
+            </div>
+            <div id="my-intro-text" class="col-lg-8 col-md-8 d-flex align-items-center">
+                <h1>FOLLOW ME NOW</h1>
+            </div>
+        </div>
+    </div>
 {% endblock %}
