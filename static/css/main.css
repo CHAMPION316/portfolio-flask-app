@@ -1,12 +1,9 @@
-* {
+*{
   margin: 0;
   padding: 0;
 }
 
-/* html, body {
-  height: 100%;
-} */
-
+/*.........................................body styling */
 body {
   position: relative;
   font-family: 'Open Sans', sans-serif;
@@ -38,27 +35,20 @@ body::after {
   z-index: -2;
 }
 
-#center-me {
-  padding-top: 30px;
+/* Contents */
+/* 
+    1. Fonts
+    2. Images
+    3. Indexing,
+    4. Padding / Margin
+*/
+
+/* 1. Fonts */
+.code-text {
+  font-family: "OCR A Std Regular";
 }
 
-/* .hero-image {
-  position: relative;
-  background-image: url("/static/img/computer-code.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-} */
-
-/* .hero-image::before {
-  content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-} */
-  
+/* 2. Images  */
 #roger-img {
   border-radius: 50%;
   border-style: solid !important;
@@ -66,34 +56,35 @@ body::after {
   border-width: 5px !important;
 }
 
-.code-text {
-  font-family: "OCR A Std Regular";
-}
-
-.index-me-up {
+/* 3. Index - index <div> over, overlay color */
+.index-z-1 {
   position: relative;
   z-index: 1;
 }
 
+/* Padding - push div down, no collusion with navbar */
 .index-pad-top {
   padding-top: 70px;
 }
 
-@media (max-width: 768px) {
-    #roger-img {
-      max-width: 70%;
-      max-height: 70%;
-      overflow: hidden;
-    }
-  }
-
+/* Media queries */
 @media screen and (max-width: 768px) {
+  #roger-img {
+    max-width:90%;
+    max-height: 90%;
+    overflow: hidden;
+  }
   #my-intro-text {
     align-items: none !important;
     display: block !important;
     text-align: center;
+    margin-top: -30px;
   }
   .index-pad-top {
     padding-top: 30px;
+  }
+  .rs-margin {
+    margin-top:10px;
+    margin-bottom: 20px;
   }
 }
