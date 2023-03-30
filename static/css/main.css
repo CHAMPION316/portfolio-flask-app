@@ -75,6 +75,10 @@ body::after {
   z-index: 1;
 }
 
+.index-pad-top {
+  padding-top: 70px;
+}
+
 @media (max-width: 768px) {
     #roger-img {
       max-width: 70%;
@@ -88,5 +92,8 @@ body::after {
     align-items: none !important;
     display: block !important;
     text-align: center;
+  }
+  .index-pad-top {
+    padding-top: 30px;
   }
 }
