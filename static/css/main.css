@@ -1,18 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* html, body {
+  height: 100%;
+} */
+
 body {
-  background-color: #7911E7 !important;
+  position: relative;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: -1;
+  /* This z-index value makes sure the overlay element is behind the body content */
+}
+
+body::after {
+  content: "";
+  background-image: url("/static/img/computer-code.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.7;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -2;
+}
+
+#center-me {
+  padding-top: 30px;
+}
+
+/* .hero-image {
+  position: relative;
+  background-image: url("/static/img/computer-code.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+
+/* .hero-image::before {
+  content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+} */
+  
+#roger-img {
+  border-radius: 50%;
+  border-style: solid !important;
+  border-color:#7911E7 !important;
+  border-width: 5px !important;
+}
+
+.code-text {
+  font-family: "OCR A Std Regular";
+}
+
+.index-me-up {
+  position: relative;
+  z-index: 1;
 }
 
 @media (max-width: 768px) {
     #roger-img {
-      max-width: 80%;
-      max-height: 95%;
+      max-width: 70%;
+      max-height: 70%;
+      overflow: hidden;
     }
   }
 
-  @media screen and (max-width: 768px) {
-    #my-intro-text {
-      align-items: none !important;
-      display: block !important;
-      text-align: center;
-    }
+@media screen and (max-width: 768px) {
+  #my-intro-text {
+    align-items: none !important;
+    display: block !important;
+    text-align: center;
   }
+}
