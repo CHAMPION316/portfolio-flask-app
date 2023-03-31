@@ -7,6 +7,7 @@
 body {
   position: relative;
   font-family: 'Open Sans', sans-serif;
+  margin-right:0 !important; */
 }
 
 body::before {
@@ -17,8 +18,7 @@ body::before {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
-  z-index: -1;
-  /* This z-index value makes sure the overlay element is behind the body content */
+  z-index: -1; /* This z-index value makes sure the overlay element is behind the body content */
 }
 
 body::after {
@@ -64,13 +64,13 @@ body::after {
 
 /* Padding - push div down, no collusion with navbar */
 .index-pad-top {
-  padding-top: 70px;
+  margin-top: 70px;
 }
 
 /* Media queries */
 @media screen and (max-width: 768px) {
   #roger-img {
-    max-width:90%;
+    max-width:50%;
     max-height: 90%;
     overflow: hidden;
   }
@@ -81,10 +81,31 @@ body::after {
     margin-top: -30px;
   }
   .index-pad-top {
-    padding-top: 30px;
+    margin-top: 30px;
   }
   .rs-margin {
-    margin-top:10px;
-    margin-bottom: 20px;
+    margin-top: 30px !important;
+    margin-bottom: 20px !important;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  #roger-img {
+    max-width: 33%;
+    max-height: 90%;
+    overflow: hidden;
+  }
+  #my-intro-text {
+    align-items: none !important;
+    display: block !important;
+    text-align: center;
+    margin-top: -30px;
+  }
+  .index-pad-top {
+    margin-top: 50px;
+  }
+  .rs-margin {
+    margin-top: 30px !important;
+    margin-bottom: 20px !important;
   }
 }
