@@ -11,7 +11,16 @@ def index():
 
 @app.route('/contact')
 def contact():
-    return render_template("contact/contact.html")
+    if request.method == 'POST':
+        # Handle form submission
+        name = request.form['name']
+        email = request.form['email']
+        message = request.form['message']
+        # Do something with the form data (e.g. send an email)
+        return 'Thank you for your message'
+    else:
+        # Display the contact form
+        return render_template("contact/contact.html")
 
 if __name__ == "__main__":
     app.run()
