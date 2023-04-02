@@ -7,7 +7,15 @@
 body {
   position: relative;
   font-family: 'Open Sans', sans-serif;
-  margin-right:0 !important; */
+
+  /* Fix white spacing at bottom of body */
+  height: calc(100vh - 0px);
+
+  /* 
+  The code above fixed the scroll issue
+  so code below is not needed but keep for now incase
+  */
+  /* margin-right: 0 !important; */
 }
 
 body::before {
@@ -41,6 +49,7 @@ body::after {
     2. Images
     3. Indexing,
     4. Padding / Margin / Flexbox
+    5. Styling
 */
 
 /* 1. Fonts */
@@ -69,18 +78,21 @@ body::after {
   margin-top: 70px;
 }
 
-/* .....................the commented code below has been redone using bootstrap instead */
-/* .social-main-div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+/* Section-form padding left + right */
+.form-padding {
+  padding-left: 100px !important;
+  padding-right: 100px !important;
 }
 
-.social-icons {
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-} */
+.my-form-button {
+  display: block !important;
+  margin: 0px auto !important;
+}
+
+/* 5. Styling */
+.transparent-input {
+  background-color: transparent !important;
+}
 
 /* Media queries */
 @media screen and (max-width: 768px) {
@@ -101,6 +113,9 @@ body::after {
   .rs-margin {
     margin-top: 30px !important;
     margin-bottom: 20px !important;
+  }
+  .small-form-width {
+    width: 50% !important;
   }
 }
 
