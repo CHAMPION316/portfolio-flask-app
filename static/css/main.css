@@ -50,6 +50,7 @@ body::after {
     3. Indexing,
     4. Padding / Margin / Flexbox
     5. Styling
+    6. Buttons
 */
 
 /* 1. Fonts */
@@ -92,6 +93,16 @@ body::after {
 /* 5. Styling */
 .transparent-input {
   background-color: transparent !important;
+}
+
+.bg-darkblue-hover:hover {
+  color: #096b7e;
+}
+
+/* 6. Buttons */
+#button1:hover {
+  background-color: #096b7e
+
 }
 
 /* Media queries */
