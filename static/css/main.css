@@ -9,7 +9,8 @@ body {
   font-family: 'Open Sans', sans-serif;
 
   /* Fix white spacing at bottom of body */
-  height: calc(100vh - 0px);
+  /* height: calc(100vh - 0px); */
+  /* height: 100vh; */
 
   /* 
   The code above fixed the scroll issue
@@ -58,6 +59,10 @@ body::after {
   font-family: "OCR A Std Regular";
 }
 
+/* .miltown-text {
+  font-family: "Miltown II Regular";
+} */
+
 /* 2. Images  */
 #roger-img {
   border-radius: 50%;
@@ -75,6 +80,10 @@ body::after {
 /* 4. Padding - push div down, no collusion with navbar */
 .index-pad-top {
   margin-top: 70px;
+}
+
+.p-line-height {
+  line-height: 2.5;
 }
 
 /* Section-form padding left + right */
