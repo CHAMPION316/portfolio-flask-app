@@ -26,6 +26,10 @@ def contact():
 def biography():
     return render_template("home/bio.html")
 
+@app.route('/languages')
+def languages():
+    return render_template("home/languages.html")
+
 
 if __name__ == "__main__":
     app.run()
