@@ -9,7 +9,7 @@ body {
   font-family: 'Open Sans', sans-serif;
 
   /* Fix white spacing at bottom of body */
-  /* height: calc(100vh - 0px); */
+  height: calc(100vh - 0px);
 
   /* 
   The code above fixed the scroll issue
@@ -125,6 +125,9 @@ body::after {
   }
   .small-form-width {
     width: 50% !important;
+  }
+  .center-bio {
+    text-align: center;
   }
 }
 
