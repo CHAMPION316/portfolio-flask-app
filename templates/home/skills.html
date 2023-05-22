@@ -1,20 +1,93 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <div class="container-fluid text-info">
-        <div class="row">
-            <div class="col-sm-4 d-flex flex-column align-items-center">
-                <h3 class="text-center">Languages</h3>
-                <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <div class="container-fluid mt-4">
+        <div class="row text-info">
+            <div class="col-md-4">
+                <div class="text-center">
+                    <div class="border border-info">
+                    <h1>Languages</h1>
+                    </div>
+                    <div class="mt-2">
+                        <p class="fw-light">Python</p>
+                        <p class="fw-light">Javascript</p>
+                        <p class="fw-light">CSS</p>
+                        <p class="fw-light">HTML</p>
+                    </div>
+                </div>
             </div>
-            <div class="col-sm-4 d-flex flex-column align-items-center">
-                <h3 class="text-center">Projects</h3>
-                <p class="text-center">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <div class="col-md-4">
+                <div class="text-center">
+                    <div class="border border-info">
+                    <h1>Projects</h1>
+                    </div>
+                    <div class="mt-2">
+                        <p>
+                            <a href="https://coffee-forest.onrender.com/" 
+                                alt="coffee forest"
+                                target="_blank" 
+                                class="fw-light icon-link 
+                                icon-link-hover text-decoration-none text-info">
+                                Coffee Forest (Django)
+                                <i class="bi bi-link"></i>
+                            </a>
+                        </p>
+                        <p>
+                            <a href="https://gourmet-chow.onrender.com/" 
+                                alt="gourmet chow restaurant website"
+                                target="_blank" 
+                                class="fw-light icon-link 
+                                icon-link-hover text-decoration-none text-info">
+                                Gourmet Chow (Flask)
+                                <i class="bi bi-link"></i>
+                            </a>
+                        </p>
+                        <p>
+                            <a href="https://riddle-me-batman.onrender.com/" 
+                                alt="riddle me batman game"
+                                target="_blank" 
+                                class="fw-light icon-link 
+                                icon-link-hover text-decoration-none text-info">
+                                Riddle Me Batman (Python)
+                                <i class="bi bi-link"></i>
+                            </a>
+                        </p>
+                        <p>
+                            <a href="https://champion316.github.io/Raiders_Fan_Quiz_Game/" 
+                                alt="raiders fan quiz game"
+                                target="_blank" 
+                                class="fw-light icon-link 
+                                icon-link-hover text-decoration-none text-info">
+                                Raiders Fan Quiz Game (Javascript)
+                                <i class="bi bi-link"></i>
+                            </a>
+                        </p>
+                        <p>
+                            <a href="https://champion316.github.io/Yoga-Nature/" 
+                                alt="yoga nature"
+                                target="_blank" 
+                                class="fw-light icon-link 
+                                icon-link-hover text-decoration-none text-info">
+                                Yoga Nature (html + css)
+                                <i class="bi bi-link"></i>
+                            </a>
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div class="col-sm-4 d-flex flex-column align-items-center">
-                <h3 class="text-center">Work</h3>
-                <p class="text-center">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <div class="col-md-4">
+                <div class="text-center">
+                    <div class="border border-info">
+                    <h1>Work</h1>
+                    </div>
+                    <div class="mt-2">
+                        <p class="fw-light">
+                            New graduate, currently working on
+                            projects to build my portfolio even more!
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
+    </div>      
 {% endblock %}
