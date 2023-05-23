@@ -30,6 +30,10 @@ def biography():
 def skills():
     return render_template("home/skills.html")
 
+@app.route('/cv')
+def download_cv():
+    return send_file('path/to/cv.pdf', as_attachment=True)
+
 
 if __name__ == "__main__":
     app.run()
