@@ -171,4 +171,7 @@ body::after {
   .center-me {
     text-align: center;
   }
+  .fs-6 {
+    font-size: inherit;
+  }
 }
