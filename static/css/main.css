@@ -168,4 +168,7 @@ body::after {
     margin-right: 0 !important;
     margin-bottom: 20px;
   }
+  .center-me {
+    text-align: center;
+  }
 }
