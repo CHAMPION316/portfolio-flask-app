@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, send_file
 
 app = Flask(__name__)
 
@@ -32,7 +32,8 @@ def skills():
 
 @app.route('/cv')
 def download_cv():
-    return send_file('path/to/cv.pdf', as_attachment=True)
+    path = 'documents/royer-resume2023.pdf'
+    return send_file(path, as_attachment=True)
 
 
 if __name__ == "__main__":
