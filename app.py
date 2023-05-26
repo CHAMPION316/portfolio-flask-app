@@ -1,10 +1,20 @@
 from flask import Flask, render_template, request, send_file
-from flask_mail import Mail, Message
+from flask_mail import Mail
+from dotenv import load_dotenv
+import os
 
 app = Flask(__name__)
 
 # set the DEBUG configuration option after creating the Flask app instance
 app.config['DEBUG'] = True
+
+app.config['MAIL_SERVER'] = os.environ.get('MAIL_SERVER')
+app.config['MAIL_PORT'] = os.environ.get('MAIL_PORT')
+app.config['MAIL_USE_TLS'] = os.environ.get('MAIL_USE_TLS,') == 'True'
+app.config['MAIL_USERNAME'] = os.environ.get('MAIL_USERNAME'), 
+app.config['MAIL_PASSWORD'] = os.environ.get('MAIL_PASSWORD')
+
+mail = Mail(app)
 
 @app.route('/')
 def index():
