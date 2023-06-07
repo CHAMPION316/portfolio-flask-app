@@ -55,18 +55,18 @@
 	<!-- Form Section -->
 	<section class="mx-auto mt-4 col-12 col-md-6 col-xl-4 small-form-width">
 		<h3 class="text-info text-center">Message directly</h3>
-		<form method="POST">
+		<form action="{{url_for('contact')}}" method="POST">
 			<div>
-				<label for="inputName4" class="form-label text-info">Name</label>
+				<label for="Name" class="form-label text-info">Name</label>
 				<input type="text" class="form-control transparent-input text-info" id="inputName4" name="name" required>
 			</div>
 			<div>
-				<label for="inputEmail4" class="form-label text-info">Email</label>
+				<label for="email" class="form-label text-info">Email</label>
 				<input type="email" class="form-control transparent-input text-info" id="inputEmail4" name="email" required>
 			</div>
 			<div class="mb-3">
-			  <label for="inputMessage" class="form-label text-info">Message</label>
-			  <textarea type="text" class="form-control transparent-input text-info" id="inputMessage" name="message" required></textarea>
+			  <label for="message" class="form-label text-info">Message</label>
+			  <textarea type="message" class="form-control transparent-input text-info" id="inputMessage" name="message" required></textarea>
 			</div>
 			<button type="submit" id="button1" class="btn btn-info my-form-button">Send</button>
 		  </form>
