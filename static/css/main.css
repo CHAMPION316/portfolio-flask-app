@@ -7,6 +7,7 @@
 body {
   position: relative;
   font-family: 'Open Sans', sans-serif;
+  padding-bottom: 1px;
 
   /* Fix white spacing at bottom of body */
   /* height: calc(100vh - 0px); */
@@ -53,16 +54,13 @@ body::after {
     4. Padding / Margin / Flexbox
     5. Styling
     6. Buttons
+    7. Media Queries
 */
 
 /* 1. Fonts */
 .code-text {
   font-family: "OCR A Std Regular";
 }
-
-/* .miltown-text {
-  font-family: "Miltown II Regular";
-} */
 
 /* 2. Images  */
 #roger-img {
@@ -72,13 +70,15 @@ body::after {
   border-width: 5px !important;
 }
 
-/* 3. Index - index <div> over, overlay color */
+/* 3. Indexing */
+/* index <div> over, overlay color */
 .index-z-1 {
   position: relative;
   z-index: 1;
 }
 
-/* 4. Padding - push div down, no collusion with navbar */
+/* 4. Padding / Margin / Flexbox */
+/* push div down, no collusion with navbar */
 .index-pad-top {
   margin-top: 70px;
 }
@@ -113,7 +113,7 @@ body::after {
 
 }
 
-/* Media queries */
+/* 7. Media queries */
 @media screen and (max-width: 768px) {
   #roger-img {
     max-width:50%;
