@@ -3,6 +3,7 @@ from flask import Flask, render_template, request, send_file
 from email.message import EmailMessage
 import smtplib
 from dotenv import load_dotenv
+from game_utils import gmail_create_draft
 import os
 
 app = Flask(__name__)
@@ -27,37 +28,55 @@ app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
 def index():
     return render_template("home/index.html")
 
+
+
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():
-    if request.method == 'POST':
-        sender_name = request.form['name']
-        sender_email = request.form['email']
-        recipient_email = "royer.seguracalderon@gmail.com"
-        subject = "Programmer job opportunity {}".format(sender_name)
-        message = request.form['message']
-        
-        msg = EmailMessage()
-        msg['From'] = sender_email
-        msg['To'] = recipient_email
-        msg['Subject'] = subject
-        msg.set_content(message)
-        
-        #SMTP Configuration
-        smtp_server = 'smtp.gmail.com'
-        smtp_port = 587
-        smtp_username = os.environ.get('MAIL_USERNAME')
-        smtp_password = os.environ.get('MAIL_PASSWORD')        
-        try:
-            with smtplib.SMTP(smtp_server, smtp_port) as server:
-                server.starttls()
-                server.login(smtp_username, smtp_password)
-                server.send_message(msg)
-                
-            return 'Email sent successfully!'
-        except smtplib.SMTPException as e:
-            return 'Error occurred while sending mail: {}'.format(str(e))
-        
+    # Handle the form submission
+    # Get the form data, name, email, message
+    name = request.form.get('name')
+    email = request.form.get('email')
+    message = request.form.get('message')
+    
+    # call the gmail_create_function_draft
+    draft = gmail_create_draft()
+    
     return render_template("home/contact.html")
+
+
+
+
+# @app.route('/contact', methods=['GET', 'POST'])
+# def contact():
+#     if request.method == 'POST':
+#         sender_name = request.form['name']
+#         sender_email = request.form['email']
+#         recipient_email = "royer.seguracalderon@gmail.com"
+#         subject = "Programmer job opportunity {}".format(sender_name)
+#         message = request.form['message']
+        
+#         msg = EmailMessage()
+#         msg['From'] = sender_email
+#         msg['To'] = recipient_email
+#         msg['Subject'] = subject
+#         msg.set_content(message)
+        
+#         #SMTP Configuration
+#         smtp_server = 'smtp.gmail.com'
+#         smtp_port = 587
+#         smtp_username = os.environ.get('MAIL_USERNAME')
+#         smtp_password = os.environ.get('MAIL_PASSWORD')        
+#         try:
+#             with smtplib.SMTP(smtp_server, smtp_port) as server:
+#                 server.starttls()
+#                 server.login(smtp_username, smtp_password)
+#                 server.send_message(msg)
+                
+#             return 'Email sent successfully!'
+#         except smtplib.SMTPException as e:
+#             return 'Error occurred while sending mail: {}'.format(str(e))
+        
+#     return render_template("home/contact.html")
 
 #biography app route
 @app.route('/bio')
