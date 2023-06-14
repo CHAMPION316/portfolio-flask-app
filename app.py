@@ -3,7 +3,6 @@ from flask import Flask, render_template, request, send_file
 from email.message import EmailMessage
 import smtplib
 from dotenv import load_dotenv
-from game_utils import gmail_create_draft
 import os
 
 app = Flask(__name__)
@@ -34,12 +33,12 @@ def index():
 def contact():
     # Handle the form submission
     # Get the form data, name, email, message
-    name = request.form.get('name')
-    email = request.form.get('email')
-    message = request.form.get('message')
+    # name = request.form.get('name')
+    # email = request.form.get('email')
+    # message = request.form.get('message')
     
     # call the gmail_create_function_draft
-    draft = gmail_create_draft()
+    # draft = gmail_create_draft()
     
     return render_template("home/contact.html")
 
@@ -76,7 +75,7 @@ def contact():
 #         except smtplib.SMTPException as e:
 #             return 'Error occurred while sending mail: {}'.format(str(e))
         
-#     return render_template("home/contact.html")
+    return render_template("home/contact.html")
 
 #biography app route
 @app.route('/bio')
