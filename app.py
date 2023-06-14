@@ -3,7 +3,6 @@ from flask import Flask, render_template, request, send_file
 from email.message import EmailMessage
 import smtplib
 from dotenv import load_dotenv
-from game_utils import gmail_create_draft
 import os
 
 app = Flask(__name__)
@@ -18,8 +17,8 @@ def index():
     return render_template("home/index.html")
 
 
-
-@app.route('/contact', methods=['GET', 'POST'])
+#contact app route
+@app.route('/contact')
 def contact():
     return render_template("home/contact.html")
 
