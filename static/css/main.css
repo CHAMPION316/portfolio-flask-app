@@ -107,6 +107,10 @@ body::after {
   color: #096b7e;
 }
 
+.my-icon-size {
+  font-size: 60px;
+}
+
 /* 6. Buttons */
 #button1:hover {
   background-color: #096b7e
